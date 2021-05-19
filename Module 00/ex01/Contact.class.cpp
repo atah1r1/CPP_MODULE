@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:03:45 by atahiri           #+#    #+#             */
-/*   Updated: 2021/05/19 16:51:43 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/05/19 18:35:26 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	Contact::getData() {
 }
 
 void	Contact::printData() {
+	std::cout << "----------------------" << std::endl;
 	std::cout << "First Name: ";
 	std::cout << this->_first_name << std::endl;
 	std::cout << "Last Name: ";
@@ -68,6 +69,7 @@ void	Contact::printData() {
 	std::cout << this->_underwear_color << std::endl;
 	std::cout << "Darkest Secret: ";
 	std::cout << this->_darkest_secret << std::endl;
+	std::cout << "----------------------";
 }
 
 std::string	Contact::getFirstName() {
