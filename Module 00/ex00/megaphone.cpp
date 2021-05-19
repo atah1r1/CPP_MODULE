@@ -6,12 +6,11 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 16:21:37 by atahiri           #+#    #+#             */
-/*   Updated: 2021/05/18 16:48:21 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/05/19 10:35:50 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string>
 
 int		main(int argc, char **argv) 
 {
