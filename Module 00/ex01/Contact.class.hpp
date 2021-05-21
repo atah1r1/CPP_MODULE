@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 14:50:22 by atahiri           #+#    #+#             */
-/*   Updated: 2021/05/19 15:02:42 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/05/21 10:31:50 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ public:
 	Contact();
 	~Contact();
 
-	void			getData();
+	void			setData();
 	void			printData();
 	
 	std::string		getFirstName();

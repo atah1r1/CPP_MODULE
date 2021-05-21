@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 18:29:56 by atahiri           #+#    #+#             */
-/*   Updated: 2021/05/20 14:15:52 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/05/21 10:33:29 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		main(int argc, char *argv[])
 
 		else if (buff == "ADD") 
 		{
-			contact[nb].getData();
+			contact[nb].setData();
 			nb++;
 		}
 		else if (buff == "SEARCH") {
@@ -37,7 +37,7 @@ int		main(int argc, char *argv[])
 		}
 		
 		else {
-			std::cout << "Command discarded !!" << std::endl;
+			std::cout << "\033[1;31mCommand discarded !!\033[0m" << std::endl;
 		}
 	}
 	return 0;

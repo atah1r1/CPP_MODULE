@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:03:45 by atahiri           #+#    #+#             */
-/*   Updated: 2021/05/20 12:09:53 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/05/21 10:31:29 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Contact::~Contact() {
 	return;
 }
 
-void	Contact::getData() {
+void	Contact::setData() {
 	std::cout << "Enter first name: ";
 	std::getline(std::cin, this->_first_name);
 	std::cout << "Enter last name: ";
