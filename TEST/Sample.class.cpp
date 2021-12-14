@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Sample.class.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/18 16:21:37 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/14 14:00:46 by atahiri          ###   ########.fr       */
+/*   Created: 2021/12/14 17:35:06 by atahiri           #+#    #+#             */
+/*   Updated: 2021/12/14 17:43:18 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Sample.class.hpp"
 
-// when we say cout, we mean the cout defined in the std namespace
 
-int		main(int argc, char **argv) 
-{
-	if (argc > 1) 
-	{
-		for (int i = 1; i < argc; i++)
-		{
-			for (int j = 0; j < (int)strlen(argv[i]); j++)
-			{
-				std::cout << (char)toupper(argv[i][j]);
-			}
-		}
-	}
-	else 
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	}
-	return 0;
+Sample::Sample(void) {
+	std::cout << "constructor called" << std::endl;
+}
+
+Sample::~Sample(void) {
+	std::cout << "destructor called" << std::endl;
 }

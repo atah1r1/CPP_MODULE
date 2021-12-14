@@ -6,7 +6,7 @@
 #    By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 10:35:39 by atahiri           #+#    #+#              #
-#    Updated: 2021/05/19 18:31:04 by atahiri          ###   ########.fr        #
+#    Updated: 2021/12/14 14:19:53 by atahiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS = -Wall -Werror -Wextra
 
 CC = clang++
 
-SRCS = Contact.class.cpp main.cpp
+SRCS = Contact.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
