@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PhoneBook.class.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/19 18:29:56 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/20 23:38:40 by atahiri          ###   ########.fr       */
+/*   Created: 2021/12/20 23:13:09 by atahiri           #+#    #+#             */
+/*   Updated: 2021/12/20 23:30:23 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "Contact.class.hpp"
-#include "PhoneBook.class.hpp"
 
-int		main(int argc, char *argv[]) 
-{
-
-	std::string cmd;
-	PhoneBook phonebook;
-
-	while (1) {
-		std::cout << "Enter a command: ";
-		std::getline(std::cin, cmd);
+class PhoneBook {
+	private:
+		int index;
+		int nb;
+		Contact contacts[8];
+	public:
+		PhoneBook();
+		~PhoneBook();
 		
-		if (strcmp(cmd.c_str(), "ADD") == 0) {
-			phonebook.create_contact();
-		}
-	}
-	return (0);
-}
+		int		get_nb_contacts(void);
+		void	add_contact(Contact contact);
+		void	print_a_contact(int	index);
+		void	create_contact(void);
+		
+};

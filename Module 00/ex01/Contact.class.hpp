@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 14:50:22 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/14 14:08:17 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/12/20 23:40:00 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,18 @@ private:
 	std::string		_darkest_secret;
 
 public:
-	Contact();
-	~Contact();
 
-	void			setData();
-	void			printData();
-	
-	std::string		getFirstName();
-	std::string		getLastName();
-	std::string		getNickname();
-	std::string		getPhoneNumber();
-	std::string		getDarkestSecret();
+	std::string		getFirstName(void);
+	std::string		getLastName(void);
+	std::string		getNickname(void);
+	std::string		getPhoneNumber(void);
+	std::string		getDarkestSecret(void);
+
+	void			setFirstName(std::string str);
+	void			setLastName(std::string str);
+	void			setNickname(std::string str);
+	void			setPhoneNumber(std::string str);
+	void			setDarkestSecret(std::string str);
 	
 };
 
