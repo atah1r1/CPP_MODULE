@@ -6,11 +6,11 @@
 #    By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 10:35:39 by atahiri           #+#    #+#              #
-#    Updated: 2021/12/20 23:38:56 by atahiri          ###   ########.fr        #
+#    Updated: 2021/12/21 22:00:52 by atahiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = contact
+NAME = phonebook
 
 CFLAGS = -Wall -Werror -Wextra
 

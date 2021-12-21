@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:03:45 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/20 22:52:32 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/12/21 22:14:24 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void		Contact::setPhoneNumber (std::string str) {
 }
 
 void		Contact::setDarkestSecret (std::string str) {
-	_phone_number = str;
+	_darkest_secret = str;
 }
 
 std::string Contact::getFirstName() {

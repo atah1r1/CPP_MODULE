@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 23:12:37 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/20 23:40:30 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/12/21 22:12:28 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ PhoneBook::PhoneBook(void)
 	nb = 0;
 }
 
-PhoneBook::~PhoneBook(void) {
-	
+PhoneBook::~PhoneBook(void)
+{
 }
 
 int PhoneBook::get_nb_contacts(void)
@@ -51,7 +51,7 @@ void PhoneBook::print_a_contact(int index)
 void PhoneBook::create_contact(void)
 {
 	Contact contact;
-	std::string	input;
+	std::string input;
 
 	std::cout << "FirstName: ";
 	std::getline(std::cin, input);
@@ -74,4 +74,11 @@ void PhoneBook::create_contact(void)
 	contact.setDarkestSecret(input);
 
 	add_contact(contact);
+}
+
+void	PhoneBook::search_for_contact(void) {
+	// std::cout << PhoneBook::get_nb_contacts() << std::endl;
+	for (int i = 0; i < PhoneBook::get_nb_contacts(); i++) {
+		PhoneBook::print_a_contact(i);
+	}
 }
