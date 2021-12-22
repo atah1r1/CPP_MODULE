@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 23:13:09 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/21 22:02:24 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/12/22 14:46:08 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ public:
 	void print_a_contact(int index);
 	void create_contact(void);
 	void search_for_contact(void);
+	Contact get_contact(int index);
 };

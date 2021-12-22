@@ -6,31 +6,25 @@
 #    By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 10:35:39 by atahiri           #+#    #+#              #
-#    Updated: 2021/12/21 22:00:52 by atahiri          ###   ########.fr        #
+#    Updated: 2021/12/22 14:19:41 by atahiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phonebook
+NAME 	= 	phonebook
+CC		= 	clang++
+FLAGS	= 	-Wall -Wextra -Werror -std=c++98
+SRCS	= 	main.cpp PhoneBook.class.cpp Contact.class.cpp
 
-CFLAGS = -Wall -Werror -Wextra
 
-CC = clang++
+$(NAME) : 	$(SRCS)
+			$(CC) $(FLAGS) $(SRCS) -o $(NAME)
 
-SRCS = Contact.class.cpp main.cpp PhoneBook.class.cpp
+all		: 	$(NAME)
 
-OBJS = $(SRCS:.cpp=.o)
+clean	:
+			@rm -rf *.o
 
-all: $(NAME)
+fclean	: 	clean
+			@rm -rf $(NAME)
 
-$(NAME): $(OBJS)
-	$(CC) $(OBJS) -o $@
-
-clean:
-	@rm -rf $(OBJS)
-	@echo "OBJECTS REMOVED !!"
-
-fclean: clean
-	@rm -rf $(NAME)
-	@echo "Cleaning All !!"
-
-re: fclean all
+re		: 	fclean all

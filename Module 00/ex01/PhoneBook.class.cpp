@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 23:12:37 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/21 22:12:28 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/12/22 14:46:19 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ PhoneBook::PhoneBook(void)
 
 PhoneBook::~PhoneBook(void)
 {
+}
+
+Contact PhoneBook::get_contact(int index)
+{
+	return contacts[index];
 }
 
 int PhoneBook::get_nb_contacts(void)
@@ -41,11 +46,11 @@ void PhoneBook::add_contact(Contact contact)
 
 void PhoneBook::print_a_contact(int index)
 {
-	std::cout << "FirstName 		:" << contacts[index].getFirstName() << std::endl;
-	std::cout << "LastName 			:" << contacts[index].getLastName() << std::endl;
-	std::cout << "Nickname 			:" << contacts[index].getNickname() << std::endl;
-	std::cout << "PhoneNumber 		:" << contacts[index].getPhoneNumber() << std::endl;
-	std::cout << "DarkestSecret 	:" << contacts[index].getDarkestSecret() << std::endl;
+	std::cout << "FirstName         : " << contacts[index].getFirstName() << std::endl;
+	std::cout << "LastName          : " << contacts[index].getLastName() << std::endl;
+	std::cout << "Nickname          : " << contacts[index].getNickname() << std::endl;
+	std::cout << "PhoneNumber       : " << contacts[index].getPhoneNumber() << std::endl;
+	std::cout << "DarkestSecret     : " << contacts[index].getDarkestSecret() << std::endl;
 }
 
 void PhoneBook::create_contact(void)
@@ -76,9 +81,14 @@ void PhoneBook::create_contact(void)
 	add_contact(contact);
 }
 
-void	PhoneBook::search_for_contact(void) {
-	// std::cout << PhoneBook::get_nb_contacts() << std::endl;
-	for (int i = 0; i < PhoneBook::get_nb_contacts(); i++) {
-		PhoneBook::print_a_contact(i);
+void PhoneBook::search_for_contact(void)
+{
+	std::cout << "\n";
+	std::cout << "#|First Name| Last Name|  Nickname|" << std::endl;
+	std::cout << "__________________________________________" << std::endl;
+	for (int i = 0; i < get_nb_contacts(); i++)
+	{
+		std::cout << i << "|";
+		get_contact(i).print_contact();
 	}
 }

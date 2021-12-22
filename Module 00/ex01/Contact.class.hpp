@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 14:50:22 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/20 23:40:00 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/12/22 14:38:17 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define CONTACT_CLASS_HPP
 
 #include <iostream>
-#include <string>
+#include <iomanip>
 
 class Contact {
 
@@ -39,6 +39,9 @@ public:
 	void			setPhoneNumber(std::string str);
 	void			setDarkestSecret(std::string str);
 	
+
+	void			print_contact(void);
+	void			parse_output(std::string str);
 };
 
 #endif

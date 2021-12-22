@@ -6,14 +6,14 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 18:29:56 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/21 22:04:06 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/12/22 14:20:06 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.class.hpp"
 #include "PhoneBook.class.hpp"
 
-int		main(int argc, char *argv[]) 
+int		main() 
 {
 
 	std::string cmd;
