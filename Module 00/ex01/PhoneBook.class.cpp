@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 23:12:37 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/22 14:46:19 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/12/24 12:31:31 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,14 +81,38 @@ void PhoneBook::create_contact(void)
 	add_contact(contact);
 }
 
+bool check_number(std::string str)
+{
+	for (int i = 0; i < (int)str.length(); i++)
+		if (isdigit(str[i]) == false)
+			return false;
+	return true;
+}
+
 void PhoneBook::search_for_contact(void)
 {
 	std::cout << "\n";
-	std::cout << "#|First Name| Last Name|  Nickname|" << std::endl;
+	std::cout << "index | First Name| Last Name | Nickname |" << std::endl;
 	std::cout << "__________________________________________" << std::endl;
 	for (int i = 0; i < get_nb_contacts(); i++)
 	{
-		std::cout << i << "|";
+		std::cout << std::setw(10) << i << "|";
 		get_contact(i).print_contact();
+	}
+
+	std::string input;
+	int index;
+	std::cout << "\n";
+	std::cout << "Enter an index of a contact to see his information: ";
+	std::getline(std::cin, input);
+	if (!check_number(input))
+		std::cout << "Your input isn't an integer" << std::endl;
+	else
+	{
+		index = atoi(input.c_str());
+		if (index > get_nb_contacts())
+			std::cout << "Your input greater than number of contacts" << std::endl;
+		else 
+			print_a_contact(index);
 	}
 }

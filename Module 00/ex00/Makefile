@@ -6,31 +6,25 @@
 #    By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/18 16:21:32 by atahiri           #+#    #+#              #
-#    Updated: 2021/05/18 16:51:53 by atahiri          ###   ########.fr        #
+#    Updated: 2021/12/22 21:18:46 by atahiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME 	= 	megaphone
+CC		= 	clang++
+FLAGS	= 	-Wall -Wextra -Werror -std=c++98
+SRCS	= 	megaphone.cpp
 
-CFLAGS = -Wall -Werror -Wextra
 
-CC = clang++
+$(NAME) : 	$(SRCS)
+			$(CC) $(FLAGS) $(SRCS) -o $(NAME)
 
-SRCS = megaphone.cpp
+all		: 	$(NAME)
 
-OBJS = $(SRCS:.cpp=.o)
+clean	:
+			@rm -rf *.o
 
-all: $(NAME)
+fclean	: 	clean
+			@rm -rf $(NAME)
 
-$(NAME): $(OBJS)
-	$(CC) $(OBJS) -o $@
-
-clean:
-	@rm -rf $(OBJS)
-	@echo "OBJECTS REMOVED !!"
-
-fclean: clean
-	@rm -rf $(NAME)
-	@echo "Cleaning All !!"
-
-re: fclean all
+re		: 	fclean all
