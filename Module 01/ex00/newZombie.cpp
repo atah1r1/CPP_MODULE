@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/18 16:21:37 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/25 15:49:55 by atahiri          ###   ########.fr       */
+/*   Created: 2021/12/25 16:19:41 by atahiri           #+#    #+#             */
+/*   Updated: 2021/12/25 16:23:53 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
 
-// when we say cout, we mean the cout defined in the std namespace
+/* new Creates an Object from a class on the Heap and return a pointer to it
+you need to delete it at the end */
 
-int		main(int argc, char *argv[]) 
+Zombie *Zombie::newZombie(std::string name)
 {
-	if (argc > 1) 
-	{
-		for (int i = 1; i < argc; i++)
-		{
-			for (int j = 0; j < (int)strlen(argv[i]); j++)
-			{
-				std::cout << (char)toupper(argv[i][j]);
-			}
-		}
-	}
-	else 
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	}
-	return 0;
+	Zombie *zombie = new Zombie;
+	return zombie;
 }
