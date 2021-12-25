@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 23:12:37 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/24 12:31:31 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/12/25 15:08:37 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,8 @@ bool check_number(std::string str)
 void PhoneBook::search_for_contact(void)
 {
 	std::cout << "\n";
-	std::cout << "index | First Name| Last Name | Nickname |" << std::endl;
-	std::cout << "__________________________________________" << std::endl;
+	std::cout << "index     |First Name|Last Name |Nickname  |" << std::endl;
+	std::cout << "____________________________________________" << std::endl;
 	for (int i = 0; i < get_nb_contacts(); i++)
 	{
 		std::cout << std::setw(10) << i << "|";
@@ -110,7 +110,7 @@ void PhoneBook::search_for_contact(void)
 	else
 	{
 		index = atoi(input.c_str());
-		if (index > get_nb_contacts())
+		if (index >= get_nb_contacts())
 			std::cout << "Your input greater than number of contacts" << std::endl;
 		else 
 			print_a_contact(index);
