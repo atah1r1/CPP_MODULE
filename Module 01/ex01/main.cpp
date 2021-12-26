@@ -1,0 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/26 12:28:04 by atahiri           #+#    #+#             */
+/*   Updated: 2021/12/26 12:35:28 by atahiri          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Zombie.hpp"
+
+int main() {
+
+    Zombie *Zombies;
+    int     N(5);
+
+    Zombies = zombieHorde(N, "ZOMBIE");
+    for (int i = 0; i < N; i++)
+       Zombies[i].announce();
+    delete [] Zombies;   
+
+    return (0);
+}
