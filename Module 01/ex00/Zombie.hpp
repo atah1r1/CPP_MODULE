@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/25 15:37:26 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/25 16:03:17 by atahiri          ###   ########.fr       */
+/*   Updated: 2021/12/26 12:06:30 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,9 @@ public:
 
 	void announce(void);
 
-	Zombie *newZombie(std::string name);
-	void randomChump(std::string name);
 };
+
+Zombie *newZombie(std::string name);
+void randomChump(std::string name);
 
 #endif

@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/25 16:19:41 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/26 12:09:55 by atahiri          ###   ########.fr       */
+/*   Created: 2021/12/26 11:58:36 by atahiri           #+#    #+#             */
+/*   Updated: 2021/12/26 12:12:09 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-/* new Creates an Object from a class on the Heap and return a pointer to it
-you need to delete it at the end */
-
-Zombie *newZombie(std::string name)
+int		main() 
 {
-	Zombie *zombie = new Zombie(name);
-	return zombie;
+	std::cout << "newZombie Function" << std::endl;
+	Zombie *z = newZombie("ZombieOnHeap");
+	z->announce();
+	delete(z);
+	
+
+	std::cout << "randomChump Function" << std::endl;
+	randomChump("ZombieOnstack");
+
+	
+	return (0);
 }

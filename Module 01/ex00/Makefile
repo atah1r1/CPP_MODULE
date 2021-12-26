@@ -6,14 +6,14 @@
 #    By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/25 15:36:59 by atahiri           #+#    #+#              #
-#    Updated: 2021/12/25 15:37:01 by atahiri          ###   ########.fr        #
+#    Updated: 2021/12/26 12:03:56 by atahiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 	= 	megaphone
+NAME 	= 	zombie
 CC		= 	clang++
 FLAGS	= 	-Wall -Wextra -Werror -std=c++98
-SRCS	= 	megaphone.cpp
+SRCS	= 	main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
 
 $(NAME) : 	$(SRCS)
