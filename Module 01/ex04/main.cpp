@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 15:47:17 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/28 15:58:26 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/02/06 13:41:28 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int main(int argc, char *argv[])
 			std::cout << "You entered an empty string" << std::endl;
 			return 0;
 		}
-		std::cout << "Mli7a" << std::endl;
+		std::cout << filename << std::endl;
+		std::cout << s1 << std::endl;
+		std::cout << s2 << std::endl;
 	}
 }
