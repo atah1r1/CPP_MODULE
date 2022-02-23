@@ -6,16 +6,16 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/26 12:40:29 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/28 14:53:47 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/02/23 09:01:24 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-/* 
+/*
 	- A pointer in C++ is a variable that holds the memory address of another variable.
 	- A reference couldn't point to nothing
- 	- A reference is an alias for an already existing variable. Once a reference is initialized to a variable,
+	- A reference is an alias for an already existing variable. Once a reference is initialized to a variable,
 	it cannot be changed to refer to another variable. Hence, a reference is similar to a const pointer.
 */
 
@@ -32,6 +32,7 @@ int main()
 
 	std::cout << std::endl << std::endl;
 
+	std::cout << "Value of string variable: " << str << std::endl;
 	std::cout << "String using pointer: " << *stringPTR << std::endl;
 	std::cout << "String using reference: " << stringREF << std::endl;
 	return (0);
