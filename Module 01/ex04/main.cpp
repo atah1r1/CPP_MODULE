@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 15:47:17 by atahiri           #+#    #+#             */
-/*   Updated: 2022/02/23 09:22:37 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/02/25 13:05:52 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,31 +34,30 @@ int main(int argc, char *argv[])
 			std::cout << "You entered an empty string" << std::endl;
 			return 0;
 		}
-
-		
-		std::fstream file(filename, std::ios::in);
-
-		if (!file.is_open())
-			return (0);
-
-		size_t pos;
-		std::string line;
-		std::string buf;
-		while (getline(file, line))
+		std::ifstream inFile(filename);
+		if (inFile)
 		{
-			if ((pos = line.find(s1, 0)) != std::string::npos) // if not found == nops max size_t
+			std::string line;
+			std::ofstream outFile;
+			outFile.open(filename + ".replace");
+			if (outFile.good())
 			{
-				line.erase(pos, s1.length());
-				line.insert(pos, s2);
+				while (std::getline(inFile, line))
+				{
+					int i = 0;
+					while (line.find(s1, i) != std::string::npos) // npos until the end of the string
+					{
+						line = std::string(line.substr(0, line.find(s1))) + s2 + std::string(line.substr(line.find(s1) + s1.length(), line.length() - 1));
+						i++;
+					}
+					outFile << line << std::endl;
+				}
+				inFile.close();
 			}
-			buf.append(line);
-			if (!file.eof())
-				buf.append("\n");
+			outFile.close();
 		}
-		file.close();
-		file.open(argv[1], std::ios::out | std::ios::trunc);
-		file << buf;
-		file.close();
+		else
+			std::cout << "Can't open the file " << filename + ".replace" << std::endl;
 	}
 	return (0);
 }
