@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 12:41:26 by atahiri           #+#    #+#             */
-/*   Updated: 2021/12/28 13:46:44 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/02/26 07:56:31 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 
 #include <iostream>
 #include <string>
+
+/* When you use use 'normal' parameter,
+	you pass the parameter by value and 
+	hence creating a copy of the parameter you pass.
+	If you are using const reference,
+	you pass it by reference and the original data is not copied.
+*/
 
 class Weapon
 {
