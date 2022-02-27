@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 15:11:48 by atahiri           #+#    #+#             */
-/*   Updated: 2022/02/26 15:21:27 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/02/27 21:47:53 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,13 @@ private:
     static const int fractional;
 
 public:
-    Fixed(int fixed);
+    Fixed(void);
     ~Fixed();
     Fixed(const Fixed &obj);
-    
-    
+    Fixed &operator=(const Fixed &obj);
+
+    int getRawBits(void) const;
+    void setRawBits(int const raw);
 };
 
 #endif
