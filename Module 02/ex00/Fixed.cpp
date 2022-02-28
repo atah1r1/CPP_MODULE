@@ -6,11 +6,13 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 15:11:09 by atahiri           #+#    #+#             */
-/*   Updated: 2022/02/27 21:58:34 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/02/28 14:45:48 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+const int Fixed::fractional = 8; // asign to a static const member a fixed value
 
 Fixed::Fixed(void)
 {
