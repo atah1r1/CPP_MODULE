@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 15:11:48 by atahiri           #+#    #+#             */
-/*   Updated: 2022/02/28 15:20:43 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/01 22:56:49 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ private:
 public:
     Fixed(void);
     ~Fixed();
-    Fixed(const Fixed &obj);
-    Fixed &operator=(const Fixed &obj);
+    Fixed(const Fixed &obj); // copy constructor
+    Fixed &operator=(const Fixed &obj); // assignment operator
 
     int getRawBits(void) const;
     void setRawBits(int const raw);
