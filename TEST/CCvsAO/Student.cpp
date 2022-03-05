@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 20:44:03 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/04 21:51:18 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/05 08:28:24 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,10 @@ Student::Student(const Student &obj): _name(obj._name), _age(obj._age)
     std::cout << "Copy constructor called" << std::endl;
 }
 
-Student::Student &operator=(const Student &obj)
+Student &Student::operator=(const Student &obj)
 {
-    // _name = obj._name;
-    // _age = obj._age;
-    // return *this;
+    std::cout << "Assignment operator called" << std::endl;
+    this->_name = obj._name;
+    this->_age = obj._age;
+    return *this;
 }
