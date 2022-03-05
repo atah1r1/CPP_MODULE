@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 20:43:59 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/05 08:27:39 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/05 08:38:10 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int main(int arc, char *argv[])
     abdlali = walid;
     
 
-    amine.PrintStudent();
-    walid.PrintStudent();
-    abdlali.PrintStudent();
-    amine.PrintStudent();
+    // amine.PrintStudent();
+    // walid.PrintStudent();
+    // abdlali.PrintStudent();
+    // amine.PrintStudent();
     return 0;
 }

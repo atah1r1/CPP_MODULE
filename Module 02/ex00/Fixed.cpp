@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 15:11:09 by atahiri           #+#    #+#             */
-/*   Updated: 2022/02/28 14:45:48 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/05 08:46:43 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,17 @@ Fixed::Fixed(const Fixed &obj)
     *this = obj;
 }
 
+/*
+    Returning by value is one of the cases when copy constructor is called. Also AFAIK, 
+    this is not always true(returning by value calling copy constructor)
+    as some compilers implement return value optimization.
+*/
+
+
 Fixed &Fixed::operator=(const Fixed &obj)
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    if (this != &obj)
-    {
-        this->fixed_number = obj.getRawBits();
-    }
+    this->fixed_number = obj.getRawBits();
     return *this;
 }
 
