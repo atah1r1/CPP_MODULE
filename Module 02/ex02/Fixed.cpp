@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 12:01:19 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/05 12:40:38 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/05 16:36:11 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,13 +135,68 @@ Fixed Fixed::operator-(const Fixed &a) const
 Fixed Fixed::operator*(const Fixed &a) const
 {
     Fixed obj;
-    obj.setRawBits(this->fixed_number * a.getRawBits());
+    obj.setRawBits((this->fixed_number * a.getRawBits()) >> this->fractional);
     return (obj);
 }
 
 Fixed Fixed::operator/(const Fixed &a) const
 {
     Fixed obj;
-    obj.setRawBits(this->fixed_number / a.getRawBits());
+    obj.setRawBits((this->fixed_number << this->fractional) / a.getRawBits());
     return (obj);
+}
+
+/*
+    pre-increment and post-increment, pre-decrement and
+    post-decrement) operators
+*/
+
+Fixed &Fixed::operator++(void)
+{
+    this->fixed_number++;
+    return (*this);
+}
+
+Fixed &Fixed::operator--(void)
+{
+    this->fixed_number--;
+    return (*this);
+}
+
+Fixed Fixed::operator++(int)
+{
+    Fixed tmp = *this;
+    operator++();
+    return (tmp);
+}
+
+Fixed Fixed::operator--(int)
+{
+    Fixed tmp = *this;
+    operator--();
+    return (tmp);
+}
+
+/*
+    overloaded member functions
+*/
+
+Fixed &Fixed::min(Fixed &a, Fixed &b)
+{
+    return a < b ? a : b;
+}
+
+Fixed &Fixed::max(Fixed &a, Fixed &b)
+{
+    return a > b ? a : b;
+}
+
+const Fixed &Fixed::min(const Fixed &a, const Fixed &b)
+{
+    return a < b ? a : b;
+}
+
+const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
+{
+    return a > b ? a : b;
 }
