@@ -6,18 +6,15 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 15:25:21 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/06 21:24:52 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/06 21:31:02 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
 
 #include <iostream>
 
 class ClapTrap
 {
-private:
+protected:
     std::string _name;
     unsigned int _hitPoints;
     unsigned int _energyPoints;
@@ -39,5 +36,3 @@ public:
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 };
-
-#endif

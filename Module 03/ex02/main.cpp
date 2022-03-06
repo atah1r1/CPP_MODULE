@@ -6,20 +6,22 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 15:28:29 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/06 20:53:50 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/06 21:57:15 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
-    ClapTrap a("AMINE");
-    ClapTrap b("WALID");
+    FragTrap a("AMINE");
+    FragTrap b("WALID");
     a.attack(b.getName());
     a.takeDamage(2);
     a.takeDamage(3);
     a.beRepaired(1);
+
+    a.highFivesGuys();
 
     return 0;
 }

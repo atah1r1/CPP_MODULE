@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/06 15:28:29 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/06 20:53:50 by atahiri          ###   ########.fr       */
+/*   Created: 2022/03/06 20:55:40 by atahiri           #+#    #+#             */
+/*   Updated: 2022/03/06 21:55:44 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
+
 #include "ClapTrap.hpp"
 
-int main()
+class FragTrap : public ClapTrap
 {
-    ClapTrap a("AMINE");
-    ClapTrap b("WALID");
-    a.attack(b.getName());
-    a.takeDamage(2);
-    a.takeDamage(3);
-    a.beRepaired(1);
+public:
+    FragTrap(void);
+    FragTrap(std::string const name);
+    ~FragTrap();
+    FragTrap(const FragTrap &);
 
-    return 0;
-}
+    FragTrap &operator=(const FragTrap &s);
+    void attack(std::string const &target);
+    void highFivesGuys();
+};
+
+#endif
