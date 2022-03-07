@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 15:25:23 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/06 21:41:56 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/08 00:37:58 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,36 +65,32 @@ int ClapTrap::getAttackDamage(void) const
 
 void ClapTrap::attack(const std::string &target)
 {
-    std::cout << "ClapTrap " << this->getName() << " attacks " << target << ", causing " << this->getAttackDamage() << " points of damage!" << std::endl;
+    if (this->_hitPoints >= 0 && this->_energyPoints >= 0)
+    {
+        std::cout << "ClapTrap " << this->getName() << " attacks " << target << ", causing " << this->getAttackDamage() << " points of damage!" << std::endl;
+        this->_energyPoints -= 1;
+        this->_hitPoints -= this->_attackDammage;
+    }
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
     // std::cout << "AMOUNT: " << amount << std::endl;
-    if (amount > 0 && amount < 4294967295)
-    {
-        std::cout << "ClapTrap : " << getName() << " takeDamage with " << amount << " points of damage!" << std::endl;
-        std::cout << " --> Energy points before: " << this->getEnergyPoints() << std::endl;
-        this->_energyPoints -= amount;
-        std::cout << " --> Energy points after: " << this->getEnergyPoints() << std::endl;
-    }
-    else
-    {
-        std::cout << "You entered an amount of dammage less than 0" << std::endl;
-    }
+    std::cout << "ClapTrap " << this->getName() << " take " << amount << " of damage" << std::endl;
+    this->_hitPoints -= amount;
+    if (this->_hitPoints < 0)
+        this->_hitPoints = 0;
+    std::cout << "ClapTrap " << this->getName() << " has " << this->getHitPoints() << " hit points left" << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    if (amount > 0 && amount < 4294967295)
+    if (this->_hitPoints >= 0 && this->_energyPoints >= 0)
     {
-        std::cout << "ClapTrap : " << getName() << " beRepaired with " << amount << " of energy points!" << std::endl;
-        std::cout << " --> Energy points before: " << this->getEnergyPoints() << std::endl;
-        this->_energyPoints += amount;
-        std::cout << " --> Energy points after: " << this->getEnergyPoints() << std::endl;
-    }
-    else
-    {
-        std::cout << "You entered an amount of dammage less than 0" << std::endl;
+        std::cout << "ClapTrap " << this->_name << " repairs itself, it gets ";
+        std::cout << amount << " hit points back!" << std::endl;
+        this->_hitPoints += amount;
+        this->_energyPoints -= 1;
+        std::cout << "ClapTrap " << this->getName() << " has " << this->getHitPoints() << " hit points left" << std::endl;
     }
 }
