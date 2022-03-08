@@ -6,16 +6,11 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 16:51:48 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/08 17:39:51 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/08 23:08:12 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
-
-// Dog::Dog(std::string type) : Animal("Dog")
-// {
-//     std::cout << "Dog Parameterized Constructor" << std::endl;
-// }
 
 Dog::Dog(void)
 {
@@ -46,13 +41,8 @@ std::string Dog::getType(void) const
     std::cout << "Dog getType" << std::endl;
     return this->type;
 }
-// void Dog::setType(std::string type) const
-// {
-//     std::cout << "Dog setType" << std::endl;
-//     this->type = type;
-// }
 
 void Dog::makeSound(void) const
 {
-    std::cout << "cats don’t bark" << std::endl;
+    std::cout << "dog bark" << std::endl;
 }

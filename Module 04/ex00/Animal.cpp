@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 16:44:51 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/08 17:40:24 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/08 23:01:55 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,8 @@ std::string Animal::getType(void) const
     std::cout << "Animal getType" << std::endl;
     return this->type;
 }
-// void Animal::setType(std::string type) const
-// {
-//     std::cout << "Animal setType" << std::endl;
-//     this->type = type;
-// }
 
 void Animal::makeSound(void) const
 {
-    std::cout << "cats don’t bark" << std::endl;
+    std::cout << "animal sound" << std::endl;
 }

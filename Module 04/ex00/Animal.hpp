@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 16:44:49 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/08 17:40:28 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/08 23:25:22 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@ public:
     Animal &operator=(const Animal &obj); // assignment operator
 
     std::string getType(void) const;
-    // void setType(std::string type) const;
 
-    void makeSound(void) const;
+    virtual void makeSound(void) const;
 };
 
 #endif

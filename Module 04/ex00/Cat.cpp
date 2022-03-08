@@ -6,16 +6,11 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 16:51:44 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/08 17:40:10 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/08 23:03:48 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
-
-// Cat::Cat(std::string type) : Animal("Cat")
-// {
-//     std::cout << "Cat Parameterized Constructor" << std::endl;
-// }
 
 Cat::Cat(void)
 {
@@ -46,11 +41,6 @@ std::string Cat::getType(void) const
     std::cout << "Cat getType" << std::endl;
     return this->type;
 }
-// void Cat::setType(std::string type) const
-// {
-//     std::cout << "Cat setType" << std::endl;
-//     this->type = type;
-// }
 
 void Cat::makeSound(void) const
 {
