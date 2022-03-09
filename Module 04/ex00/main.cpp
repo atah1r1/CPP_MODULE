@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 16:42:51 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/09 09:33:51 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/09 20:02:15 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,21 @@ int main()
         i->makeSound(); // will output the cat sound!
         j->makeSound();
         meta->makeSound();
-        delete meta;
-        delete i;
         delete j;
+        delete i;
+        delete meta;
     }
 
-    {
-        std::cout << "**** INVALID TEST ****" << std::endl;
-        const WrongAnimal *meta = new WrongAnimal();
-        const WrongAnimal *j = new WrongCat();
-        std::cout << j->getType() << " " << std::endl;
-        j->makeSound();
-        meta->makeSound();
-        delete meta;
-        delete j;
-    }
+    // {
+    //     std::cout << "**** INVALID TEST ****" << std::endl;
+    //     const WrongAnimal *meta = new WrongAnimal();
+    //     const WrongAnimal *j = new WrongCat();
+    //     std::cout << j->getType() << " " << std::endl;
+    //     j->makeSound();
+    //     meta->makeSound();
+    //     delete meta;
+    //     delete j;
+    // }
 
     return 0;
 }

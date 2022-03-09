@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 16:51:44 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/09 11:20:22 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/09 19:56:09 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ Cat::Cat(const Cat &obj)
 Cat &Cat::operator=(const Cat &obj)
 {
     std::cout << "Cat Assignment Operator" << std::endl;
-    this->type = obj.type;
     *this->brain = *(obj.brain);
+    this->type = obj.type;
     return *this;
 }
 
