@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 23:55:06 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/11 10:43:06 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/11 19:02:55 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,19 +79,19 @@ void Bureaucrat::increment(void)
     this->grade--;
 }
 
-void Bureaucrat::beSigned(Form &Form)
+void Bureaucrat::beSigned(Form &form)
 {
     try
 	{
-		Form.beSigned(*this);
-		std::cout << this->getName() << " signs " << Form.getName() << std::endl;
+		form.beSigned(*this);
+		std::cout << this->getName() << " signs " << form.getName() << std::endl;
 	}
 	catch (const std::exception& e)
 	{
-		std::cout << this->getName() << " cannot sign "<< Form.getName() << " because " ;
-		if (this->getGrade() > Form.getGradeToSign())
+		std::cout << this->getName() << " cannot sign "<< form.getName() << " because " ;
+		if (this->getGrade() > form.getGradeToSign())
 			std::cout << "the grade is too low";
-		if (this->getGrade() < Form.getGradeToSign())
+		if (this->getGrade() < form.getGradeToSign())
 			std::cout << "the grade is too high";
 		std::cout << std::endl;
 	}

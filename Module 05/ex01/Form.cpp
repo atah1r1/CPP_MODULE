@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 09:54:56 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/11 10:37:45 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/11 19:04:37 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,9 @@ std::ostream &operator<<(std::ostream &out, Form const &obj)
     return (out);
 }
 
-void Form::beSigned(Bureaucrat &Bureaucrat)
+void Form::beSigned(Bureaucrat &bureaucrat)
 {
-	if (Bureaucrat.getGrade() > this->getGradeToSign())
+	if (bureaucrat.getGrade() > this->getGradeToSign())
 	{
 		std::cout << "This Form can not be signed " << std::endl;
 		throw Form::GradeTooLowException();	
