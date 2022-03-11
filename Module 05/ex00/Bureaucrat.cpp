@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 23:55:06 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/11 00:12:54 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/11 09:52:08 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &obj)
     return *this;
 }
 
-std::ostream &operator<<(std::ostream &oc, Bureaucrat const &b)
+std::ostream &operator<<(std::ostream &out, Bureaucrat const &obj)
 {
-    std::cout << b.getName() << ", bureaucrat grade " << b.getGrade();
-    return (oc);
+    std::cout << obj.getName() << ", bureaucrat grade " << obj.getGrade();
+    return (out);
 }
 
 std::string Bureaucrat::getName(void) const
