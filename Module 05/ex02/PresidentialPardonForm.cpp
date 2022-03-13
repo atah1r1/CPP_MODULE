@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 09:54:00 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/13 09:58:33 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/13 11:28:02 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,12 @@ PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPard
 
 void PresidentialPardonForm::execute(Bureaucrat const &b) const
 {
+    srand(time(NULL));
+
+    int iSecret = rand() % 10 + 1;
     if (this->getIsSigned() == 0)
         throw Form::NotSigned();
     else if (b.getGrade() > this->getGradeToExec())
         throw Bureaucrat::GradeTooLowException();
-    std::cout << this->target << " has been pardoned by Zaphod Beeblebrox" << std::endl;
-
-    // add robotomy failed check
+    iSecret % 2 == 0 ? std::cout << this->target << " has been pardoned by Zaphod Beeblebrox" << std::endl : std::cout << "the robotomy failed" << std::endl;
 }
