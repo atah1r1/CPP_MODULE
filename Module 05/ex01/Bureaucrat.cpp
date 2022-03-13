@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 23:55:06 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/11 19:02:55 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/13 08:21:56 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void Bureaucrat::increment(void)
     this->grade--;
 }
 
-void Bureaucrat::beSigned(Form &form)
+void Bureaucrat::signForm(Form &form)
 {
     try
 	{

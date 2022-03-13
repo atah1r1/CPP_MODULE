@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 09:54:56 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/11 19:04:37 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/13 08:24:19 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,10 @@ unsigned int Form::getGradeToExec(void) const
 
 std::ostream &operator<<(std::ostream &out, Form const &obj)
 {
-    std::cout << "Name: " << obj.getName();
-    std::cout << "Is Signed: " << obj.getIsSigned();
-    std::cout << "Grade to Sign: " << obj.getGradeToSign();
-    std::cout << "Grade to Execute: " << obj.getGradeToExec();
+    std::cout << "Name: " << obj.getName() << std::endl;
+    std::cout << "Is Signed: " << obj.getIsSigned() << std::endl;
+    std::cout << "Grade to Sign: " << obj.getGradeToSign() << std::endl;
+    std::cout << "Grade to Execute: " << obj.getGradeToExec() << std::endl;
     return (out);
 }
 
