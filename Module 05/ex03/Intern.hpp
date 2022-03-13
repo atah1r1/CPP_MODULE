@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 11:21:21 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/13 11:21:52 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/13 11:48:08 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,50 +14,24 @@
 #define INTERN_HPP
 
 #include <iostream>
-#include "Bureaucrat.hpp"
+#include "Form.hpp"
 
-class Form
+class Intern
 {
-private:
-    const std::string name;
-    bool is_signed;
-    const unsigned int gradeToSign;
-    const unsigned int gradeToExec;
-
 public:
-    Form(void);
-    Form(std::string, unsigned int, unsigned int);
-    ~Form();
-    Form(const Form &obj);            // copy constructor
-    Form &operator=(const Form &obj); // assignment operator
+    Intern(void);
+    ~Intern();
 
-    std::string getName(void) const;
-    bool getIsSigned(void) const;
-    unsigned int getGradeToSign(void) const;
-    unsigned int getGradeToExec(void) const;
+    Form *makeForm(std::string form, std::string target);
+    Form *PresidentialPardon(std::string name);
+    Form *ShrubberyCreation(std::string name);
+    Form *RobotomyRequest(std::string name);
 
-    void beSigned(Bureaucrat &bureaucrat);
-
-    virtual void execute(Bureaucrat const &executor) const = 0;
-
-    class GradeTooHighException : public std::exception
-    {
-    public:
-        virtual const char *what() const throw();
-    };
-
-    class GradeTooLowException : public std::exception
-    {
-    public:
-        virtual const char *what() const throw();
-    };
-
-    class NotSigned : public std::exception
+    class invalidForm : public std::exception
     {
     public:
         virtual const char *what() const throw();
     };
 };
-std::ostream &operator<<(std::ostream &, Form const &);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 08:33:52 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/13 09:29:32 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/13 12:15:15 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 ShrubberyCreationForm::ShrubberyCreationForm()
 {
-    std::cout << "ShrubberyCreationForm Default Constructor " << std::endl;
+    std::cout << "ShrubberyCreationForm Default Constructor" << std::endl;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-    std::cout << "ShrubberyCreationForm Default Destructor  " << std::endl;
+    std::cout << "ShrubberyCreationForm Default Destructor" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("ShrubberyCreationForm", 145, 137)
 {
-    std::cout << "ShrubberyCreationForm Parmeterized Constructor " << std::endl;
+    std::cout << "ShrubberyCreationForm Parmeterized Constructor" << std::endl;
     this->target = target;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &obj) : Form("ShrubberyCreationForm", 145, 137)
 {
-    std::cout << "ShrubberyCreationForm Copy Constructor " << std::endl;
+    std::cout << "ShrubberyCreationForm Copy Constructor" << std::endl;
     *this = obj;
 }
 

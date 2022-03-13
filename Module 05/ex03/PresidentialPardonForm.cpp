@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 09:54:00 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/13 11:26:56 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/13 12:15:06 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 PresidentialPardonForm::PresidentialPardonForm()
 {
-    std::cout << "PresidentialPardonForm Default Constructor " << std::endl;
+    std::cout << "PresidentialPardonForm Default Constructor" << std::endl;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-    std::cout << "PresidentialPardonForm Default Destructor  " << std::endl;
+    std::cout << "PresidentialPardonForm Default Destructor" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("PresidentialPardonForm", 25, 5)
 {
-    std::cout << "PresidentialPardonForm Parmeterized Constructor " << std::endl;
+    std::cout << "PresidentialPardonForm Parmeterized Constructor" << std::endl;
     this->target = target;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &obj) : Form("PresidentialPardonForm", 25, 5)
 {
-    std::cout << "PresidentialPardonForm Copy Constructor " << std::endl;
+    std::cout << "PresidentialPardonForm Copy Constructor" << std::endl;
     *this = obj;
 }
 
