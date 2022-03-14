@@ -6,13 +6,13 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 09:54:56 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/13 08:24:19 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/13 16:38:02 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(void) : gradeToSign(), gradeToExec()
+Form::Form(void) : gradeToSign(0), gradeToExec(0)
 {
     std::cout << "Form Default Constructor" << std::endl;
     this->is_signed = false;
@@ -20,7 +20,7 @@ Form::Form(void) : gradeToSign(), gradeToExec()
 Form::Form(std::string name, unsigned int gradeToSign, unsigned int gradeToExec) : name(name), gradeToSign(gradeToSign), gradeToExec(gradeToExec)
 {
     std::cout << "Form Default Constructor" << std::endl;
-    // this->is_signed = false;
+    this->is_signed = false;
 }
 
 Form::~Form()

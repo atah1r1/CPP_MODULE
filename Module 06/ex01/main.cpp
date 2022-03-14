@@ -5,31 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/10 23:54:54 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/13 16:24:35 by atahiri          ###   ########.fr       */
+/*   Created: 2022/03/14 15:59:14 by atahiri           #+#    #+#             */
+/*   Updated: 2022/03/14 16:12:10 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "Intern.hpp"
-
-int main()
-{
-    try
-    {
-        Intern someRandomIntern;
-        Form *rrf;
-
-        rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-        std::cout << "Type of the form : " << rrf->getName() << std::endl;
-    }
-    catch (std::exception &e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-    return 0;
-}
+// reinterpret_cast used to cast a datatype to another datatype , i doesn't matter
+// checking if it's possible or not

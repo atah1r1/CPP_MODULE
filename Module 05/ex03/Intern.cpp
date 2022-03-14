@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 11:21:23 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/13 12:12:03 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/13 16:23:17 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ const char *Intern::invalidForm::what() const throw()
 Form *Intern::makeForm(std::string form, std::string target)
 {
     size_t i = 0;
-    std::string requests[] = {"robotomy request", "shrubbery creation", "presidential pardon"};
+    std::string requests[3] = {"robotomy request", "shrubbery creation", "presidential pardon"};
     Form *(Intern::*fct[])(std::string) = {&Intern::RobotomyRequest, &Intern::ShrubberyCreation, &Intern::PresidentialPardon};
     for (i = 0; i < 3; i++)
     {
