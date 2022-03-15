@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   serializer.hpp                                     :+:      :+:    :+:   */
+/*   C.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/14 22:33:33 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/15 09:59:06 by atahiri          ###   ########.fr       */
+/*   Created: 2022/03/15 10:24:47 by atahiri           #+#    #+#             */
+/*   Updated: 2022/03/15 10:35:13 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERIALIZER_HPP
-#define SERIALIZER_HPP
+#ifndef C_HPP
+#define C_HPP
 
-#include "Data.hpp"
+#include "Base.hpp"
 
-uintptr_t serialize(Data *ptr);
-Data *deserialize(uintptr_t raw);
+class C : public Base
+{
+};
 
 #endif
