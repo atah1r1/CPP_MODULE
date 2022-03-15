@@ -6,12 +6,12 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 22:33:33 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/14 22:33:40 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/15 09:55:19 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __SERIALIZER_HPP__
-# define __SERIALIZER_HPP__
+#ifndef SERIALIZER_HPP
+# define SERIALIZER_HPP
 
 # include "Data.hpp"
 

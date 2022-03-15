@@ -6,12 +6,12 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 22:35:42 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/14 22:35:54 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/15 09:55:28 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __DATA_HPP__
-#define __DATA_HPP__
+#ifndef DATA_HPP
+#define DATA_HPP
 
 #include <string>
 
