@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 11:50:11 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/17 10:50:58 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/17 11:33:55 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ public:
             throw std::invalid_argument("Enter a size greater than 0");
         }
         ptr = new T[size()];
+        for (int i = 0; i < this->_size; i++)
+        {
+            ptr[i] = T();
+        }
     }
     ~Array<T>()
     {
