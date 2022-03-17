@@ -6,29 +6,35 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 11:47:49 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/16 20:30:50 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/17 11:30:07 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 
-#define MAX_VAL 750
+#define MAX_VAL 10
 
 int main(int, char **)
 {
     Array<int> numbers(MAX_VAL);
     int *mirror = new int[MAX_VAL];
-    srand(time(NULL));
     for (int i = 0; i < MAX_VAL; i++)
     {
-        const int value = rand();
+        const int value = rand() % 10 + 1; // give a number between 1 and 10
         numbers[i] = value;
         mirror[i] = value;
     }
+    std::cout << "Print numbers values: " << std::endl;
+    numbers.print();
+    std::cout << std::endl;
     // //SCOPE
     {
         Array<int> tmp = numbers;
         Array<int> test(tmp);
+        
+        std::cout << "Print test values: " << std::endl;
+        test.print();
+        std::cout << std::endl;
     }
 
     for (int i = 0; i < MAX_VAL; i++)
@@ -39,27 +45,30 @@ int main(int, char **)
             return 1;
         }
     }
+    std::cout << "Test bad Index: " << std::endl;
     try
     {
         numbers[-2] = 0;
     }
-    catch(const std::exception& e)
+    catch (const std::exception &e)
     {
         std::cerr << e.what() << '\n';
     }
+    std::cout << "Test bad Accessor: " << std::endl;
     try
     {
         numbers[MAX_VAL] = 0;
     }
-    catch(const std::exception& e)
+    catch (const std::exception &e)
     {
         std::cerr << e.what() << '\n';
     }
 
     for (int i = 0; i < MAX_VAL; i++)
     {
-        numbers[i] = rand();
+        numbers[i] = rand() % 10 + 1;
     }
-    delete [] mirror;//
+    delete[] mirror; //
+    // system("leaks template");
     return 0;
 }

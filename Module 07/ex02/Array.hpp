@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 11:50:11 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/16 20:27:12 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/17 10:50:58 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ public:
         if (size() <= 0)
         {
             throw std::invalid_argument("Enter a size greater than 0");
-            return;
         }
         ptr = new T[size()];
     }
@@ -74,8 +73,7 @@ public:
     {
         if (index >= this->_size || index < 0)
         {
-            std::out_of_range("Array index out of bound !");
-            exit(0);
+            throw std::out_of_range("Array index out of bound !");
         }
         return ptr[index];
     }
@@ -84,10 +82,16 @@ public:
     {
         if (index >= this->_size || index < 0)
         {
-            std::out_of_range("Array index out of bound !");
-            exit(0);
+            throw std::out_of_range("Array index out of bound !");
         }
         return ptr[index];
+    }
+
+    void print(void) const
+    {
+        for (size_t i = 0; i < this->size(); i++)
+            std::cout << this->ptr[i] << " ";
+        std::cout << std::endl;
     }
 };
 
