@@ -6,11 +6,11 @@
 #    By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 09:02:20 by atahiri           #+#    #+#              #
-#    Updated: 2022/03/18 14:04:20 by atahiri          ###   ########.fr        #
+#    Updated: 2022/03/18 18:43:54 by atahiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 	= 	span
+NAME 	= 	stack
 CC		= 	c++
 FLAGS	= 	-Wall -Wextra -Werror -std=c++98
 SRCS	= 	main.cpp
