@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 13:55:41 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/18 14:05:21 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/18 14:09:41 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <iostream>
 #include <stack>
-#include <iterator>
+// #include <iterator>
 
 template <typename T>
 class MutantStack : public std::stack<T>
@@ -23,6 +23,7 @@ class MutantStack : public std::stack<T>
 private:
     /* data */
 public:
+    typedef typename T::iterator iterator;
     MutantStack(){};
     ~MutantStack(){};
     MutantStack(const MutantStack &obj)
