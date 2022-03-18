@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 11:47:49 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/17 11:32:48 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/17 11:38:17 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int main(int, char **)
 {
     Array<int> numbers(MAX_VAL);
-    numbers.print();
+    // numbers.print();
     int *mirror = new int[MAX_VAL];
     for (int i = 0; i < MAX_VAL; i++)
     {

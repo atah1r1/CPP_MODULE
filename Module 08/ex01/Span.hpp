@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 09:02:50 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/18 10:02:53 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/18 12:18:34 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,15 @@ public:
     void addNumber(unsigned int n);
     int shortestSpan(void);
     int longestSpan(void);
+
+
+    template <typename T>
+    void addRange(T begin, T end)
+    {
+        if (this->vec.size() >= this->N)
+            throw Span::addMore();
+        this->vec.insert(this->vec.end(), begin, end);
+    }
 
     class addMore : public std::exception
     {

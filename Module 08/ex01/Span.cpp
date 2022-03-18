@@ -6,7 +6,7 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 09:02:47 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/18 10:27:46 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/18 12:19:37 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,6 @@ int Span::shortestSpan(void)
     }
     return shortestSpan;
 }
-
-// addRange func
 
 const char *Span::addMore::what() const throw()
 {

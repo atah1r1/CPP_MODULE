@@ -6,11 +6,13 @@
 /*   By: atahiri <atahiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 09:02:28 by atahiri           #+#    #+#             */
-/*   Updated: 2022/03/18 10:22:30 by atahiri          ###   ########.fr       */
+/*   Updated: 2022/03/18 12:21:39 by atahiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
+
+int RandomNumber(void) { return std::rand() % 100; };
 
 int main()
 {
@@ -29,6 +31,14 @@ int main()
     catch (const std::exception &e)
     {
         std::cerr << e.what() << '\n';
+    }
+    {
+        std::vector<int> vec(100, 0);
+        std::generate(vec.begin(), vec.end(), RandomNumber);
+        Span sp1 = Span(100);
+        sp1.addRange(vec.begin(), vec.end());
+        std::cout << sp1.longestSpan() << std::endl;
+        std::cout << sp1.shortestSpan() << std::endl;
     }
 
     return 0;
